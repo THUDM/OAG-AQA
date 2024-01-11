@@ -1,0 +1,12 @@
+# CUDA_VISIBLE_DEVICES=2 python dense_retriever.py \
+# 	model_file=/home/shishijie/workspace/project/DPR/checkpoints/stackex_qa_hn/dpr_biencoder.33 \
+# 	qa_dataset=nq_test \
+# 	ctx_datatsets=[dpr_wiki] \
+# 	encoded_ctx_files=[\"/home/shishijie/workspace/project/DPR/dpr/downloads/data/retriever_results/nq/single-adv-hn/wikipedia_passages_*\"] \
+# 	out_file=/home/shishijie/workspace/project/oag-qa/result/nq_dpr/res.json 
+CUDA_VISIBLE_DEVICES=2 python dense_retriever.py \
+	model_file=/home/shishijie/workspace/project/DPR/checkpoints/stackex_qa_hn/dpr_biencoder.33 \
+	qa_dataset=stackex_qa_test \
+	ctx_datatsets=[dpr_stackex_qa] \
+	encoded_ctx_files=[/home/shishijie/workspace/project/DPR/checkpoints/stackex_qa_hn/ctx_biencoder.33/ctx_biencoder.33_0] \
+	out_file=/home/shishijie/workspace/project/DPR/checkpoints/stackex_qa_hn/ctx_biencoder.33/res.json
