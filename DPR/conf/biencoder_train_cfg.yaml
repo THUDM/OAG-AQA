@@ -7,7 +7,7 @@ defaults:
 
 train_datasets:
 dev_datasets:
-output_dir:
+output_dir: output_dpr
 train_sampling_rates:
 loss_scale_factors:
 

@@ -1,3 +1,4 @@
+import os
 import re
 from nltk.stem import PorterStemmer 
 import math
@@ -285,7 +286,8 @@ def main():
 	s=BuildIndex(oagqa_data_path,queries_path)
 	rankedDocs=s.rankedDocs
 	labels=s.labels
- 
+
+	os.makedirs('./result/stackex_tfidf',exist_ok=True)
 	with open('./result/stackex_tfidf/tfidf_recall100.txt','w',encoding='utf8') as fw:
 		for line in rankedDocs:
 			line=[item[0] for item in line]
