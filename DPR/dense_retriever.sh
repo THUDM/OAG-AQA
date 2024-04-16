@@ -1,7 +1,8 @@
-
-CUDA_VISIBLE_DEVICES=2 python dense_retriever.py \
-	model_file=/home/shishijie/workspace/project/DPR/checkpoints/stackex_qa_hn/dpr_biencoder.33 \
+model_dir=/home/zhangfanjin/projects/qa/OAG-AQA/outputs/2024-04-15/15-27-08/output_dpr
+epoch=29
+CUDA_VISIBLE_DEVICES=4 python DPR/dense_retriever.py \
+	model_file=$model_dir/dpr_biencoder.$epoch \
 	qa_dataset=stackex_qa_test \
 	ctx_datatsets=[dpr_stackex_qa] \
-	encoded_ctx_files=[/home/shishijie/workspace/project/DPR/checkpoints/stackex_qa_hn/ctx_biencoder.33/ctx_biencoder.33_0] \
-	out_file=/home/shishijie/workspace/project/DPR/checkpoints/stackex_qa_hn/ctx_biencoder.33/res.json
+	encoded_ctx_files=[$model_dir/ctx_encoder_$epoch.pkl_0] \
+	out_file=$model_dir/valid_sub_ckpt_$epoch.txt

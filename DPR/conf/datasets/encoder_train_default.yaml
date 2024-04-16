@@ -50,4 +50,4 @@ stackex_qa_train:
 
 stackex_qa_valid:
   _target_: dpr.data.biencoder_data.JsonQADataset
-  file: /home/shishijie/workspace/project/oag-qa/data/stackex_dpr/valid_with_hn.json
+  file: /home/zhangfanjin/projects/qa/OAG-AQA/data/kddcup/dpr/dev.json

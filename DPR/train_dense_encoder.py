@@ -545,11 +545,12 @@ class BiEncoderTrainer(object):
                     data_iteration,
                     epoch_batches,
                 )
-                self.validate_and_save(epoch, train_data_iterator.get_iteration(), scheduler)
+                # self.validate_and_save(epoch, train_data_iterator.get_iteration(), scheduler)
                 self.biencoder.train()
 
         logger.info("Epoch finished on %d", cfg.local_rank)
-        self.validate_and_save(epoch, data_iteration, scheduler)
+        if (epoch + 1) % 5 == 0:
+            self.validate_and_save(epoch, data_iteration, scheduler)
 
         epoch_loss = (epoch_loss / epoch_batches) if epoch_batches > 0 else 0
         logger.info("Av Loss per epoch=%f", epoch_loss)

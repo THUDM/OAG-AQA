@@ -373,9 +373,22 @@ def save_results(
         #    results_item[questions_extra_attr] = extra
 
         merged_data.append(results_item)
+    
+    pids = []
+    with open("/home/zhangfanjin/projects/qa/OAG-AQA/data/kddcup/candidate_papers.tsv") as rf:
+        for i, line in enumerate(rf):
+            items = line.strip().split()
+            pids.append(items[-1])
 
     with open(out_file, "w") as writer:
-        writer.write(json.dumps(merged_data, indent=4) + "\n")
+        # writer.write(json.dumps(merged_data, indent=4) + "\n")
+        for i, q in enumerate(questions):
+            r_pids = [] 
+            for c in range(20):
+                cur_ans_index = int(top_passages_and_scores[i][0][c].split(":")[-1])
+                r_pids.append(pids[cur_ans_index])
+            writer.write(",".join(r_pids) + "\n")
+            writer.flush()
     logger.info("Saved results * scores  to %s", out_file)
 
 

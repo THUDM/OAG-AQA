@@ -246,7 +246,7 @@ class BuildIndex:
 	# 	ranked_docs = sorted(self.total_score.items(), key=lambda x: x[1], reverse=True)[:20]
 	# 	return ranked_docs
 	def ranked_docs(self,score):
-		ranked_docs = sorted(score.items(), key=lambda x: x[1], reverse=True)[:100]
+		ranked_docs = sorted(score.items(), key=lambda x: x[1], reverse=True)[:20]
 		return ranked_docs
 
 	def get_queries_ranked_doces(self,queries):
@@ -265,7 +265,7 @@ class BuildIndex:
 			for line in fr.readlines():
 				line=json.loads(line)
 				q=line['question'].lower()
-				label=line['pids']
+				# label=line['pids']
     
 				pattern = re.compile('\W+')
 				q = pattern.sub(' ', q)
@@ -275,20 +275,20 @@ class BuildIndex:
 				stemmer = PorterStemmer()
 				q = [stemmer.stem(w) for w in q ]
 				queries.append(q)
-				labels.append(label)
+				# labels.append(label)
 
 		return queries,labels
 
 def main():
-	oagqa_data_path='/home/shishijie/workspace/project/oag-qa/raw_data/stackex_qa_data/papers_re_stopwords.json'
-	queries_path='/home/shishijie/workspace/project/oag-qa/raw_data/stackex_qa_data/qa_test_new.txt'
+	oagqa_data_path='data/kddcup/pid_to_title_abs_new.json'
+	queries_path='data/kddcup/qa_valid_wo_ans.txt'
  
 	s=BuildIndex(oagqa_data_path,queries_path)
 	rankedDocs=s.rankedDocs
-	labels=s.labels
+	# labels=s.labels
 
-	os.makedirs('./result/stackex_tfidf',exist_ok=True)
-	with open('./result/stackex_tfidf/tfidf_recall100.txt','w',encoding='utf8') as fw:
+	os.makedirs('./result/bm25/',exist_ok=True)
+	with open('./result/bm25/bm25_valid_result.txt','w',encoding='utf8') as fw:
 		for line in rankedDocs:
 			line=[item[0] for item in line]
 			fw.write(",".join(line)+'\n')

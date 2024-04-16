@@ -35,5 +35,5 @@ curatedtrec_test:
 
 stackex_qa_test:
   _target_: dpr.data.retriever_data.CsvQASrc
-  file: /home/shishijie/workspace/project/oag-qa/data/stackex_dpr/qa_test.tsv
+  file: /home/zhangfanjin/projects/qa/OAG-AQA/data/kddcup/qa_valid_dpr.tsv
 

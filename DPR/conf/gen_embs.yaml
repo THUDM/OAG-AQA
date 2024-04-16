@@ -3,7 +3,7 @@ defaults:
   - ctx_sources: default_sources
 
 # A trained bi-encoder checkpoint file to initialize the model
-model_file: /home/shishijie/workspace/project/DPR/checkpoints/stackex_qa_hn/dpr_biencoder.33
+model_file: /home/zhangfanjin/projects/qa/OAG-AQA/outputs/2024-04-15/15-27-08/output_dpr/dpr_biencoder.29
 
 # Name of the all-passages resource
 ctx_src: dpr_stackex_qa
@@ -12,7 +12,7 @@ ctx_src: dpr_stackex_qa
 encoder_type: ctx
 
 # output .tsv file path to write results to
-out_file: /home/shishijie/workspace/project/DPR/checkpoints/stackex_qa_hn/ctx_biencoder.33/ctx_encoder.pkl
+out_file: /home/zhangfanjin/projects/qa/OAG-AQA/outputs/2024-04-15/15-27-08/output_dpr/ctx_encoder_29.pkl
 
 # Whether to lower case the input text. Set True for uncased models, False for the cased ones.
 do_lower_case: True
@@ -24,7 +24,7 @@ shard_id: 0
 num_shards: 1
 
 # Batch size for the passage encoder forward pass (works in DataParallel mode)
-batch_size: 32
+batch_size: 128
 
 tables_as_passages: False
 
