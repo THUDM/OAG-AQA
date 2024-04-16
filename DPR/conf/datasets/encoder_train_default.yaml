@@ -46,7 +46,7 @@ curatedtrec_dev:
 
 stackex_qa_train:
   _target_: dpr.data.biencoder_data.JsonQADataset
-  file: /home/shishijie/workspace/project/oag-qa/data/stackex_dpr/train_with_hn.json
+  file: /home/zhangfanjin/projects/qa/OAG-AQA/data/kddcup/dpr/train_with_hn.json
 
 stackex_qa_valid:
   _target_: dpr.data.biencoder_data.JsonQADataset

@@ -4,10 +4,10 @@
 encoder_model_type: hf_bert
 
 # HuggingFace's config name for model initialization
-pretrained_model_cfg: /home/shishijie/workspace/PTMs/bert-base-uncased
+pretrained_model_cfg: /data1/zhangfanjin/projects/qa/OAG-AQA/data/kddcup/PTMs/bert-base-uncased
 
 # Some encoders need to be initialized from a file
-pretrained_file: /home/shishijie/workspace/PTMs/bert-base-uncased
+pretrained_file: /data1/zhangfanjin/projects/qa/OAG-AQA/data/kddcup/PTMs/bert-base-uncased
 
 # Extra linear layer on top of standard bert/roberta encoder
 projection_dim: 0
