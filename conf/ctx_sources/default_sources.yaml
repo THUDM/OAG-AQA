@@ -7,5 +7,5 @@ dpr_wiki:
 
 dpr_stackex_qa:
   _target_: dpr.data.retriever_data.CsvCtxSrc
-  file: /home/zhangfanjin/projects/qa/OAG-AQA/data/kddcup/candidate_papers.tsv
+  file: /home/zhangfanjin/projects/qa/OAG-AQA/data/kddcup/dpr/candidate_papers.tsv
   id_prefix: 'wiki:'
