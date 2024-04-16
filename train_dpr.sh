@@ -1,4 +1,4 @@
-CUDA_VISIBLE_DEVICES=4 python DPR/train_dense_encoder.py \
+python train_dense_encoder.py \
     train_datasets=[stackex_qa_train] \
     dev_datasets=[stackex_qa_valid]
     train=biencoder_local \
