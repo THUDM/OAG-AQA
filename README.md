@@ -47,7 +47,7 @@ Config the following paths before training (**Absolute** paths are recommended. 
 - ``stackex_qa_train`` and ``stackex_qa_valid`` in _conf/datasets/encoder_train_default.yaml_.  
 ==> ``train_with_hn.json`` and ``dev.json`` are processed training and valiation data provided in processed data files.
 - ``pretrained_model_cfg`` and ``pretrained_file`` in _conf/encoder/hf_bert.yaml_.  
-==> Download ``bert-base-uncased`` model from [[Hugging Face]](https://huggingface.co/google-bert/bert-base-uncased).
+==> Download ``bert-base-uncased`` model from [[Aliyun]](https://open-data-set.oss-cn-beijing.aliyuncs.com/oag-benchmark/kddcup-2024/AQA/bert-base-uncased-dpr-init.zip).
 
 ```bash
 bash train_dpr.sh
