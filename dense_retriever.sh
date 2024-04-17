@@ -1,6 +1,6 @@
 model_dir=/home/zhangfanjin/projects/qa/OAG-AQA/outputs/2024-04-15/15-27-08/output_dpr
 epoch=29
-CUDA_VISIBLE_DEVICES=4 python DPR/dense_retriever.py \
+python dense_retriever.py \
 	model_file=$model_dir/dpr_biencoder.$epoch \
 	qa_dataset=stackex_qa_test \
 	ctx_datatsets=[dpr_stackex_qa] \
