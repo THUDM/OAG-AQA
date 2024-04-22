@@ -28,7 +28,9 @@ python -m spacy download en_core_web_sm
 
 The raw dataset can be downloaded from [BaiduPan](https://pan.baidu.com/s/1bFM6QM1tv4cz-Vx8VEGp7A?pwd=v2bb) with password v2bb, [Aliyun](https://open-data-set.oss-cn-beijing.aliyuncs.com/oag-benchmark/kddcup-2024/AQA/AQA.zip) or [DropBox](https://www.dropbox.com/scl/fi/2ckwl9fcpbik88z1cekot/AQA.zip?rlkey=o7ttmrvpdbvbu3rcr6t33jrx7&dl=1).
 The processed data can be downloaded from [Aliyun](https://open-data-set.oss-cn-beijing.aliyuncs.com/oag-benchmark/kddcup-2024/AQA/aqa_train_data_processed.zip).
-Unzip the processed data and put these files into ``data/kddcup/dpr`` directory.
+Unzip the processed data and put these files into ``data/kddcup/dpr`` directory.  
+
+Note: In train_with_hn.json, ``negative_ctxs`` are randomly sampled from candidate papers, and ``hard_negative_ctxs`` are randomly sampled from the references of positive samples.
 
 ## Run Baseline for [KDD Cup 2024](https://www.biendata.xyz/competition/aqa_kdd_2024/)
 
