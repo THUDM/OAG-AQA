@@ -30,7 +30,7 @@ The raw dataset can be downloaded from [BaiduPan](https://pan.baidu.com/s/1bFM6Q
 The processed data can be downloaded from [Aliyun](https://open-data-set.oss-cn-beijing.aliyuncs.com/oag-benchmark/kddcup-2024/AQA/aqa_train_data_processed.zip).
 Unzip the processed data and put these files into ``data/kddcup/dpr`` directory.  
 
-Note: In train_with_hn.json, ``negative_ctxs`` are randomly sampled from candidate papers, and ``hard_negative_ctxs`` are randomly sampled from the references of positive samples.
+Note: In train_with_hn.json, ``negative_ctxs`` are randomly sampled from candidate papers, and ``hard_negative_ctxs`` are randomly sampled from the references of positive samples.  References of positive samples are sampled from [[DBLP Citation Dataset]](https://open.aminer.cn/open/article?id=655db2202ab17a072284bc0c).
 
 ## Run Baseline for [KDD Cup 2024](https://www.biendata.xyz/competition/aqa_kdd_2024/)
 
