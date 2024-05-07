@@ -99,3 +99,26 @@ If you find this dataset useful in your research, please cite the following pape
     year={2024}
 }
 ```
+
+# 5、Evaluate using llm-embedder
+
+* pytorch 1.13.1
+
+```
+cd /P-tuning-v2/PT-Retrieval
+conda create -n pt2 python==3.8
+conda activate pt2
+pip install -r requirements.txt
+```
+
+Modify parameters `model_cfg, ctx_file, out_file` in the file `./P-tuning-v2/PT-Retrieval/eval_scripts/evaluate_oagqav2.sh`
+
+`model_cfg:` llm_embedder model path
+
+`ctx_file:` oag-qa data path
+
+`out_file:`  file save path
+
+RUN
+
+`sh eval_scripts/evaluate_oagqav2.sh $topic $topk`
